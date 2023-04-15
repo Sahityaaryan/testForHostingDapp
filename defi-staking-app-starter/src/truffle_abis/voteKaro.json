@@ -1,0 +1,849 @@
+{
+  "contractName": "voteKaro",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "person",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "Vote",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"Vote\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"counter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"person\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/testvo.sol\":\"voteKaro\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/testvo.sol\":{\"keccak256\":\"0xf13ac658e8f2b5f009934fabe8d940db7396895a9c5ca7b14027fa12c1904dcd\",\"urls\":[\"bzz-raw://85ec476bd142cbc63e6108b146e927b7e75b5e06c720cd4e570f373036b57c9e\",\"dweb:/ipfs/QmfHTcxeXdPYNz182z5puoRWG5y6VjLfLaF3Zwn4Wr5TXL\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008060006101000a81548160ff021916908315150217905550600060015534801561002f57600080fd5b506101068061003f6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c806361bc221a1460415780636bf52ffa14605d57806377ec2b55146065575b600080fd5b60476085565b6040518082815260200191505060405180910390f35b6063608b565b005b606b60bf565b604051808215151515815260200191505060405180910390f35b60015481565b6000809054906101000a900460ff16600015158115151460aa57600080fd5b60016000815480929190600101919050555050565b6000809054906101000a900460ff168156fea265627a7a72315820ac17fe365819c7b9cecd7fbe046e68fee0eab8887b3a723fa056b3ae88688d9764736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c806361bc221a1460415780636bf52ffa14605d57806377ec2b55146065575b600080fd5b60476085565b6040518082815260200191505060405180910390f35b6063608b565b005b606b60bf565b604051808215151515815260200191505060405180910390f35b60015481565b6000809054906101000a900460ff16600015158115151460aa57600080fd5b60016000815480929190600101919050555050565b6000809054906101000a900460ff168156fea265627a7a72315820ac17fe365819c7b9cecd7fbe046e68fee0eab8887b3a723fa056b3ae88688d9764736f6c63430005110032",
+  "sourceMap": "63:281:3:-;;;137:5;116:26;;;;;;;;;;;;;;;;;;;;171:1;149:23;;63:281;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:281:3;;;;;;;",
+  "deployedSourceMap": "63:281:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:281:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;149:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;272:67;;;:::i;:::-;;116:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;149:23;;;;:::o;272:67::-;303:6;;;;;;;;;;;240:5;230:15;;:6;:15;;;222:24;;;;;;322:7;;:9;;;;;;;;;;;;;272:67;:::o;116:26::-;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity > 0.5.0;\r\n\r\ncontract voteKaro{\r\n    //address private owner\r\n    bool public person = false;\r\n    uint public counter = 0;\r\n\r\n    modifier canVote(bool person) {\r\n        require(person == false);\r\n        _;\r\n    }\r\n    function Vote() public canVote(person) {\r\n        counter++;\r\n    }\r\n\r\n}",
+  "sourcePath": "D:\\New_Desktop\\codeOnDemand\\defi-staking-app-starter\\src\\contracts\\testvo.sol",
+  "ast": {
+    "absolutePath": "project:/src/contracts/testvo.sol",
+    "exportedSymbols": {
+      "voteKaro": [
+        221
+      ]
+    },
+    "id": 222,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 192,
+        "literals": [
+          "solidity",
+          ">",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 221,
+        "linearizedBaseContracts": [
+          221
+        ],
+        "name": "voteKaro",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 195,
+            "name": "person",
+            "nodeType": "VariableDeclaration",
+            "scope": 221,
+            "src": "116:26:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 193,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "116:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "66616c7365",
+              "id": 194,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "137:5:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 198,
+            "name": "counter",
+            "nodeType": "VariableDeclaration",
+            "scope": 221,
+            "src": "149:23:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 196,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "149:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 197,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "171:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "211:55:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 205,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 203,
+                          "name": "person",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 200,
+                          "src": "230:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 204,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "240:5:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "230:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 202,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        239,
+                        240
+                      ],
+                      "referencedDeclaration": 239,
+                      "src": "222:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 206,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "222:24:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 207,
+                  "nodeType": "ExpressionStatement",
+                  "src": "222:24:3"
+                },
+                {
+                  "id": 208,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "257:1:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 210,
+            "name": "canVote",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 201,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 200,
+                  "name": "person",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "198:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 199,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "198:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:13:3"
+            },
+            "src": "181:85:3",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 219,
+              "nodeType": "Block",
+              "src": "311:28:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 217,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "322:9:3",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 216,
+                      "name": "counter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 198,
+                      "src": "322:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 218,
+                  "nodeType": "ExpressionStatement",
+                  "src": "322:9:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 220,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 213,
+                    "name": "person",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 195,
+                    "src": "303:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                ],
+                "id": 214,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 212,
+                  "name": "canVote",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 210,
+                  "src": "295:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_bool_$",
+                    "typeString": "modifier (bool)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "295:15:3"
+              }
+            ],
+            "name": "Vote",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 211,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "285:2:3"
+            },
+            "returnParameters": {
+              "id": 215,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "311:0:3"
+            },
+            "scope": 221,
+            "src": "272:67:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 222,
+        "src": "63:281:3"
+      }
+    ],
+    "src": "35:309:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/src/contracts/testvo.sol",
+      "exportedSymbols": {
+        "voteKaro": [
+          221
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 192,
+        "name": "PragmaDirective",
+        "src": "35:24:3"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            221
+          ],
+          "name": "voteKaro",
+          "scope": 222
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "person",
+              "scope": 221,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 193,
+                "name": "ElementaryTypeName",
+                "src": "116:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "66616c7365",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "bool",
+                  "type": "bool",
+                  "value": "false"
+                },
+                "id": 194,
+                "name": "Literal",
+                "src": "137:5:3"
+              }
+            ],
+            "id": 195,
+            "name": "VariableDeclaration",
+            "src": "116:26:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "counter",
+              "scope": 221,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 196,
+                "name": "ElementaryTypeName",
+                "src": "149:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 197,
+                "name": "Literal",
+                "src": "171:1:3"
+              }
+            ],
+            "id": 198,
+            "name": "VariableDeclaration",
+            "src": "149:23:3"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "canVote",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "person",
+                      "scope": 210,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 199,
+                        "name": "ElementaryTypeName",
+                        "src": "198:4:3"
+                      }
+                    ],
+                    "id": 200,
+                    "name": "VariableDeclaration",
+                    "src": "198:11:3"
+                  }
+                ],
+                "id": 201,
+                "name": "ParameterList",
+                "src": "197:13:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                239,
+                                240
+                              ],
+                              "referencedDeclaration": 239,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 202,
+                            "name": "Identifier",
+                            "src": "222:7:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 200,
+                                  "type": "bool",
+                                  "value": "person"
+                                },
+                                "id": 203,
+                                "name": "Identifier",
+                                "src": "230:6:3"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "66616c7365",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "bool",
+                                  "type": "bool",
+                                  "value": "false"
+                                },
+                                "id": 204,
+                                "name": "Literal",
+                                "src": "240:5:3"
+                              }
+                            ],
+                            "id": 205,
+                            "name": "BinaryOperation",
+                            "src": "230:15:3"
+                          }
+                        ],
+                        "id": 206,
+                        "name": "FunctionCall",
+                        "src": "222:24:3"
+                      }
+                    ],
+                    "id": 207,
+                    "name": "ExpressionStatement",
+                    "src": "222:24:3"
+                  },
+                  {
+                    "id": 208,
+                    "name": "PlaceholderStatement",
+                    "src": "257:1:3"
+                  }
+                ],
+                "id": 209,
+                "name": "Block",
+                "src": "211:55:3"
+              }
+            ],
+            "id": 210,
+            "name": "ModifierDefinition",
+            "src": "181:85:3"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "Vote",
+              "scope": 221,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 211,
+                "name": "ParameterList",
+                "src": "285:2:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 215,
+                "name": "ParameterList",
+                "src": "311:0:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 210,
+                      "type": "modifier (bool)",
+                      "value": "canVote"
+                    },
+                    "id": 212,
+                    "name": "Identifier",
+                    "src": "295:7:3"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 195,
+                      "type": "bool",
+                      "value": "person"
+                    },
+                    "id": 213,
+                    "name": "Identifier",
+                    "src": "303:6:3"
+                  }
+                ],
+                "id": 214,
+                "name": "ModifierInvocation",
+                "src": "295:15:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 198,
+                              "type": "uint256",
+                              "value": "counter"
+                            },
+                            "id": 216,
+                            "name": "Identifier",
+                            "src": "322:7:3"
+                          }
+                        ],
+                        "id": 217,
+                        "name": "UnaryOperation",
+                        "src": "322:9:3"
+                      }
+                    ],
+                    "id": 218,
+                    "name": "ExpressionStatement",
+                    "src": "322:9:3"
+                  }
+                ],
+                "id": 219,
+                "name": "Block",
+                "src": "311:28:3"
+              }
+            ],
+            "id": 220,
+            "name": "FunctionDefinition",
+            "src": "272:67:3"
+          }
+        ],
+        "id": 221,
+        "name": "ContractDefinition",
+        "src": "63:281:3"
+      }
+    ],
+    "id": 222,
+    "name": "SourceUnit",
+    "src": "35:309:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-04-15T05:56:09.499Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

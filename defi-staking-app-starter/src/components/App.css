@@ -1,0 +1,88 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+
+#heading{
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+#accountName{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+
+
+#loader{
+    text-align: center;
+    margin: 12rem;
+}
+
+.votingBallot{
+    border: 0.1rem solid black;
+ display: flex;
+ flex-direction: column;
+    width: 32%;
+    height: 23rem;
+    background-color: cyan;
+}
+
+#voteContainer{
+    display: flex;
+    margin: 2rem;
+}
+#endVoting{
+   position: relative;
+   bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    
+}
+/* if(result != `result will be declared soon`){
+                
+} */
+
+#resultsOfVoting{
+   margin: auto;
+   /* text-align: center; */
+    width: 23rem;
+    border: 0.1rem solid red;
+    height: 2rem;
+
+}
+#results{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.98rem;
+    /* margin-left: 29rem;
+    margin-right: 29rem; */
+}
+#boxContainingResult{
+    margin-bottom: 1rem;
+    /* background-color: green; */  
+}
+
+.votingButtons{
+    position: relative;
+    top: 15.6rem;
+}
+
+#votingSectionOfA, #votingSectionOfB, #votingSectionOfC{
+    text-align: center;
+}
+
+#showingResults{
+    display: flex;
+    justify-content: center;
+}
+
+
+#showingResults *{
+    margin: 0.2rem;
+}
